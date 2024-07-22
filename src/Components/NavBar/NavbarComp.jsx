@@ -21,8 +21,10 @@ function NavbarComp() {
   return (
     <Navbar expand="lg" className=" bg-body-secondary shadow fixed-top">
       <Container>
-        <Navbar.Brand className="text-danger fw-bolder fs-3">
-          Sticky App
+        <Navbar.Brand>
+          <Link to="/" className="text-danger fw-bolder fs-3">
+            Sticky App
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="text-center outline">
@@ -39,7 +41,9 @@ function NavbarComp() {
             ) : (
               <div className="d-flex justify-content-center align-items-center gap-2">
                 <div className="position-relative d-flex justify-content-center align-items-center text-danger">
-                    <h6 className="position-absolute bottom-50 mb-2">{ noteLenght}</h6>
+                  <h6 className="position-absolute bottom-50 mb-2">
+                    {noteLenght}
+                  </h6>
                   <i class="fa-solid fa-box-open fa-lg"></i>
                 </div>
                 <Nav.Link className="link" onClick={logout}>
