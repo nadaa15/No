@@ -1,6 +1,6 @@
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css"
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Home from './Components/Home/Home'
 import Layout from './Components/Layout/Layout'
 import Register from './Components/Register/Register'
@@ -13,7 +13,7 @@ import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute'
 
 
 function App() {
-  let router = createBrowserRouter([
+  let router = createHashRouter([
     {
       path: "",
       element: <Layout />,
